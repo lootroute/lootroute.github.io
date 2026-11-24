@@ -1,0 +1,31 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>LootRoute pin</title>
+<style>
+html,body{margin:0;height:100%;overflow:hidden;background:#0d0b1f;font-family:"Segoe UI",system-ui,Arial,sans-serif;color:#fff}
+.p{position:fixed;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:6vh 7vw;box-sizing:border-box;
+background:radial-gradient(circle at 15% 10%,rgba(255,46,147,.55),transparent 45%),radial-gradient(circle at 90% 95%,rgba(0,229,199,.45),transparent 45%),#0d0b1f}
+.top{font-size:3.2vh;letter-spacing:.15em;text-transform:uppercase;color:#ffb347;font-weight:700}
+h1{font-size:7.4vh;line-height:1.05;margin:2vh 0 0;font-weight:900}
+h1 b{color:#00e5c7}
+ol{margin:0;padding:0;list-style:none}
+li{display:flex;gap:2.2vh;align-items:flex-start;font-size:3.4vh;line-height:1.25;margin:2.6vh 0;font-weight:600}
+li span{flex:none;width:5.6vh;height:5.6vh;border-radius:1.4vh;background:linear-gradient(135deg,#ff2e93,#ffb347);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:3vh}
+.foot{display:flex;align-items:center;gap:2vh;font-size:3vh;font-weight:800}
+.foot svg{width:8vh;height:8vh}
+.foot small{display:block;font-size:2.4vh;color:#a9a6c4;font-weight:600}
+</style></head><body>
+<div class="p">
+<div><div class="top" id="top"></div><h1 id="h"></h1></div>
+<ol id="l"></ol>
+<div class="foot"><svg viewBox="0 0 100 100"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff2e93"/><stop offset="1" stop-color="#ffb347"/></linearGradient></defs><rect x="6" y="6" width="88" height="88" rx="22" fill="#151233" stroke="url(#g)" stroke-width="6"/><path d="M24 72 C 24 52, 46 58, 50 44 S 70 30, 76 28" fill="none" stroke="#00e5c7" stroke-width="7" stroke-linecap="round" stroke-dasharray="1 12"/><circle cx="24" cy="72" r="7" fill="#00e5c7"/><path d="M68 18 l14 4 l-4 14 z" fill="#ffb347"/><rect x="62" y="56" width="22" height="18" rx="3" fill="url(#g)"/></svg><div>Full guide free<small>lootroute.github.io/gta6</small></div></div>
+</div>
+<script>
+const P={
+1:["GTA 6 guide","5 GTA 6 tricks <b>nobody</b> tells you",["Focus Mode (L3+R3) shows cash in green","Your wallet caps at $20,000","Dark blue buildings can be entered","Your car door is a weapon","Any explosion opens a safe"]],
+2:["GTA 6 money","Make money <b>fast</b> in GTA 6",["Grab Donnie's $1,200 stash bag","Rob low-security stores solo","Sell clean cars to Moses","Skip banks until Chapter 3","Bank cash after every job"]],
+3:["GTA 6 cars","Fastest cars in GTA 6 & <b>where</b> they park",["Granforma Zorrusso – Capri mansion","Pegassi Tempesta – Vice Beach hotel","Pegassi Vitello – Capri driveway","Piccia Furia – Capri peninsula","Scan cars with the Waink app first"]]};
+const n=new URLSearchParams(location.search).get('n')||1,d=P[n];
+document.getElementById('top').textContent=d[0];document.getElementById('h').innerHTML=d[1];
+document.getElementById('l').innerHTML=d[2].map((t,i)=>'<li><span>'+(i+1)+'</span>'+t+'</li>').join('');
+</script>
+</body></html>
